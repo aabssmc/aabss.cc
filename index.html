@@ -22,6 +22,10 @@
         <meta property="twitter:card" content="summary_large_image"/>
         <link rel="canonical" href="https://aabss.site"/>
         <link href="https://fonts.googleapis.com/css2?display=swap&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300;1,400" rel="stylesheet" type="text/css"/>
+        <script>
+        var audio = new Audio('assets/honk.mp3');
+            function myAudioFunction
+        </script>
         <style>
             html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
                 margin: 0;
@@ -1188,7 +1192,10 @@
                                 <div>
                                     <div id="image01" class="image">
                                         <span class="frame">
-                                            <img src="assets/aabss.jpg" onclick="document.getElementById('assets/honk.mp3').play();" alt="aabss"/>
+                                            <audio id="audio" src="assets/honk.mp3"></audio>
+                                            <a onclick="document.getElementById("audio").play();">
+                                                <img src="assets/aabss.jpg" alt="aabss" width=550 height=550 class="shake-slow shake-constant">
+                                            </a>
                                         </span>
                                     </div>
                                     <h1 id="text02">aabss.site</h1>
