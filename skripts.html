@@ -103,7 +103,7 @@
                 transform: scale(1);
                 width: 100vw;
                 z-index: 0;
-                background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cfilter%20id%3D%22noise%22%3E%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%20%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220.26953125%200%200%200%200%200%200.203125%200%200%200%200%200%200.27734375%200%200%200%200%200%200.4375%200%22%20%2F%3E%20%3C%2Ffilter%3E%20%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(to top, rgba(206,223,242,0.11), rgba(206,223,242,0.11)), url('assets/bg.jpg');
+                background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%3Cfilter%20id%3D%22noise%22%3E%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.875%22%20result%3D%22noise%22%20%2F%3E%20%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220.26953125%200%200%200%200%200%200.203125%200%200%200%200%200%200.27734375%200%200%200%200%200%200.4375%200%22%20%2F%3E%20%3C%2Ffilter%3E%20%3Crect%20filter%3D%22url%28%23noise%29%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22transparent%22%20opacity%3D%221%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(to top, rgba(206,223,242,0.11), rgba(206,223,242,0.11)), url('assets/images/bg.jpg?v=180992cf');
                 background-size: 512px, auto, cover;
                 background-position: center, 0% 0%, center;
                 background-repeat: repeat, repeat, no-repeat;
@@ -362,16 +362,78 @@
                 white-space: nowrap;
             }
 
-            #buttons01 {
+            #buttons03 {
                 justify-content: center;
-                gap: 1.5rem;
+                gap: 1rem;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            #buttons03 li a {
+                display: inline-flex;
+                width: 14.625rem;
+                height: 3.5rem;
+                line-height: 3.5rem;
+                padding: 0 1.75rem;
+                vertical-align: middle;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 1em;
+                font-weight: 300;
+                border-radius: 2.5rem;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+            }
+
+            #buttons03 li a svg {
+                display: block;
+                fill: #555F61;
+                flex-grow: 0;
+                flex-shrink: 0;
+                height: 100%;
+                min-width: 16px;
+                width: 1.25em;
+                margin-left: 0.5em;
+                margin-right: calc(-0.125em + 0rem);
+                transition: fill 0.25s ease;
+            }
+
+            #buttons03 li a .label {
+                direction: var(--site-language-direction);
+                overflow: hidden;
+                flex-grow: 1;
+                flex-shrink: 1;
+                text-align: left;
+                width: 100%;
+            }
+
+            #buttons03 .button {
+                background-color: rgba(255,255,255,0.6);
+                color: #555F61;
+            }
+
+            #buttons03 .button svg {
+                fill: #555F61;
+            }
+
+            #buttons03 .button:hover {
+                background-color: #FFFFFF !important;
+            }
+
+            #buttons03 li a:hover {
+                transform: scale(1.0425);
+            }
+
+            #buttons01 {
+                justify-content: flex-start;
+                gap: 1rem;
                 flex-direction: row;
                 flex-wrap: wrap;
             }
 
             #buttons01 li a {
                 display: inline-flex;
-                width: 15.5rem;
+                width: 7.125rem;
                 height: 3.5rem;
                 line-height: 3.5rem;
                 padding: 0 1.75rem;
@@ -421,68 +483,6 @@
             }
 
             #buttons01 li a:hover {
-                transform: scale(1.0425);
-            }
-
-            #buttons02 {
-                justify-content: flex-end;
-                gap: 1.5rem;
-                flex-direction: column;
-                flex-wrap: nowrap;
-            }
-
-            #buttons02 li a {
-                display: inline-flex;
-                width: 7rem;
-                height: 3.5rem;
-                line-height: 3.5rem;
-                padding: 0 1.75rem;
-                vertical-align: middle;
-                font-family: 'Source Sans Pro', sans-serif;
-                font-size: 1em;
-                font-weight: 300;
-                border-radius: 2.5rem;
-                flex-direction: row-reverse;
-                justify-content: flex-end;
-                transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
-            }
-
-            #buttons02 li a svg {
-                display: block;
-                fill: #555F61;
-                flex-grow: 0;
-                flex-shrink: 0;
-                height: 100%;
-                min-width: 16px;
-                width: 1.125em;
-                margin-left: 0.5em;
-                margin-right: calc(-0.125em + 0rem);
-                transition: fill 0.25s ease;
-            }
-
-            #buttons02 li a .label {
-                direction: var(--site-language-direction);
-                overflow: hidden;
-                flex-grow: 1;
-                flex-shrink: 1;
-                text-align: left;
-                width: 100%;
-            }
-
-            #buttons02 .button {
-                background-color: rgba(255,255,255,0.6);
-                color: #555F61;
-            }
-
-            #buttons02 .button svg {
-                fill: #555F61;
-            }
-
-            #buttons02 .button:hover {
-                background-color: #FFFFFF !important;
-            }
-
-            #buttons02 li a:hover {
                 transform: scale(1.0425);
             }
 
@@ -872,8 +872,21 @@
                     line-height: 1.5;
                 }
 
+                #buttons03 {
+                    gap: 1rem;
+                }
+
+                #buttons03 li a {
+                    letter-spacing: 0rem;
+                    font-size: 1em;
+                }
+
+                #buttons03 li a svg {
+                    width: 1.25em;
+                }
+
                 #buttons01 {
-                    gap: 1.5rem;
+                    gap: 1rem;
                 }
 
                 #buttons01 li a {
@@ -883,19 +896,6 @@
 
                 #buttons01 li a svg {
                     width: 1.25em;
-                }
-
-                #buttons02 {
-                    gap: 1.5rem;
-                }
-
-                #buttons02 li a {
-                    letter-spacing: 0rem;
-                    font-size: 1em;
-                }
-
-                #buttons02 li a svg {
-                    width: 1.125em;
                 }
 
                 #image01 .frame {
@@ -1028,17 +1028,22 @@
                     --spacing: 0.65625rem;
                 }
 
+                #buttons03 {
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
+
+                #buttons03 li a {
+                    max-width: 32rem;
+                    width: 100%;
+                }
+
                 #buttons01 {
                     flex-direction: column;
                     flex-wrap: nowrap;
                 }
 
                 #buttons01 li a {
-                    max-width: 32rem;
-                    width: 100%;
-                }
-
-                #buttons02 li a {
                     max-width: 32rem;
                     width: 100%;
                 }
@@ -1059,12 +1064,12 @@
                     font-size: 1em;
                 }
 
-                #buttons01 {
-                    gap: 1.125rem;
+                #buttons03 {
+                    gap: 0.75rem;
                 }
 
-                #buttons02 {
-                    gap: 1.125rem;
+                #buttons01 {
+                    gap: 0.75rem;
                 }
 
                 #container01 > .wrapper > .inner {
@@ -1105,10 +1110,10 @@
                 <div class="inner">
                     <div id="image01" class="image">
                         <span class="frame">
-                            <img src="assets/aabss.jpg" alt="aabss"/>
+                            <img src="assets/images/image01.jpg?v=180992cf" alt="aabss"/>
                         </span>
                     </div>
-                                        <div id="container01" class="container default">
+                    <div id="container01" class="container default">
                         <div class="wrapper">
                             <div class="inner">
                                 <h1 id="text01">These are all the skripts I &#39;ve worked on, please take a look and consider rating them on SpigotMC!</h1>
