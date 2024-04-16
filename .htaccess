@@ -1,4 +1,4 @@
 RewriteEngine On
-RewriteCond %skripts.html !-d
-RewriteCond %skripts.html !-f
+RewriteCond %projects.html !-d
+RewriteCond %projects.html !-f
 RewriteRule ^([^\.]+)$ $1.html [NC, L]
