@@ -1,4 +1,8 @@
 RewriteEngine On
 RewriteCond %projects.html !-d
 RewriteCond %projects.html !-f
+RewriteCond %pertix.html !-d
+RewriteCond %pertix.html !-f
+RewriteCond %skuishy.html !-d
+RewriteCond %skuishy.html !-f
 RewriteRule ^([^\.]+)$ $1.html [NC, L]
