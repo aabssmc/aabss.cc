@@ -1,7 +1,9 @@
 RewriteEngine On
-RewriteRule ^projects$ /projects.html [L]
-RewriteRule ^eventcore$ /redirects/eventcore.html [L]
-RewriteRule ^eventutils$ /redirects/eventutils.html [L]
-RewriteRule ^skhttp$ /redirects/skhttp.html [L]
-RewriteRule ^skuishy$ /redirects/skuishy.html [L]
-RewriteRule ^([^\.]+)$ $1.html [NC, L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteCond %{REQUEST_URI} !-d
+RewriteCond %{REQUEST_URI} !-f
+RewriteRule ^redirects/([^\.]+)$ redirects/$1.html [NC,L]
